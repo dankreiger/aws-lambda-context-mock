@@ -1,6 +1,6 @@
 {
   "name": "aws-lambda-context-mock",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "repository": {
     "url": "https://github.com/dankreiger/aws-lambda-context-mock"

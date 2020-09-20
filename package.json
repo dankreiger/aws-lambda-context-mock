@@ -2,6 +2,9 @@
   "name": "aws-lambda-context-mock",
   "version": "1.0.1",
   "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "types": "lib/src/index.d.ts",
@@ -9,16 +12,31 @@
     "lib"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,tsx,jsx,json,css}": [
+      "prettier --single-quote --write"
+    ]
+  },
   "devDependencies": {
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
     "@rollup/plugin-commonjs": "15.0.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "@types/aws-lambda": "8.10.62",
     "aws-lambda": "1.0.6",
+    "husky": "4.3.0",
+    "jest": "^26.4.2",
+    "lint-staged": "10.4.0",
+    "prettier": "2.1.2",
     "rollup": "2.27.1",
     "rollup-plugin-size-snapshot": "0.12.0",
     "rollup-plugin-typescript2": "0.27.2",

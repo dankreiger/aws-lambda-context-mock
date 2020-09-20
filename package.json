@@ -5,7 +5,15 @@
   "repository": {
     "url": "https://github.com/dankreiger/aws-lambda-context-mock"
   },
-  "keywords": [],
+  "keywords": [
+    "aws",
+    "lambda",
+    "context",
+    "mock",
+    "edge",
+    "testing",
+    "mocks"
+  ],
   "license": "ISC",
   "author": "",
   "main": "lib/index.cjs.js",

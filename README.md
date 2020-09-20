@@ -1,4 +1,4 @@
-### AWS Lambda Context Mock
+# AWS Lambda Context Mock
 
 Docs: https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html
 
@@ -9,14 +9,14 @@ Docs: https://docs.aws.amazon.com/lambda/latest/dg/nodejs-context.html
 ```js
 import { awsLambdaContextMock } from 'aws-lambda-context-mock';
 
-//.... default mock
+//... default mock
 test(`handler redirects uri to '/index.html'`, () => {
   // invoke lambda handler
   handler(event, awsLambdaContextMock(), cb);
-  /// ....
+  /// ...
 });
 
-//.... custp, mock
+//... custom, mock
 test(`handler redirects uri to '/index.html'`, () => {
   // invoke lambda handler
   handler(
@@ -24,9 +24,11 @@ test(`handler redirects uri to '/index.html'`, () => {
     awsLambdaContextMock({ callbackWaitsForEmptyEventLoop: true }),
     cb
   );
-  /// ....
+  /// ...
 });
 ```
+
+***
 
 ## Context methods (with mock defaults)
 

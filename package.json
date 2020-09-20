@@ -2,6 +2,9 @@
   "name": "aws-lambda-context-mock",
   "version": "1.0.1",
   "description": "",
+  "repository": {
+    "url": "https://github.com/dankreiger/aws-lambda-context-mock"
+  },
   "keywords": [],
   "license": "ISC",
   "author": "",
@@ -40,6 +43,7 @@
     "rollup": "2.27.1",
     "rollup-plugin-size-snapshot": "0.12.0",
     "rollup-plugin-typescript2": "0.27.2",
+    "ts-jest": "^26.3.0",
     "typescript": "4.0.3"
   }
 }

@@ -1,4 +1,4 @@
 import { Context } from 'aws-lambda';
-declare type AwsLambdaContextMock = () => Context;
-export declare const cloudFrontRequestEventContextMock: AwsLambdaContextMock;
-export {};
+declare type AwsLambdaContextMock = (props?: Record<keyof Context, any>) => Context;
+export declare const awsLambdaContextMock: AwsLambdaContextMock;
+export default awsLambdaContextMock;

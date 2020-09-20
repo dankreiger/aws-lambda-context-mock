@@ -1,9 +1,9 @@
 import { Context } from 'aws-lambda';
 
-type AwsLambdaContextMock = () => Context;
+type AwsLambdaContextMock = (props?: Record<keyof Context, any>) => Context;
 
-export const cloudFrontRequestEventContextMock: AwsLambdaContextMock = (
-  props = {}
+export const awsLambdaContextMock: AwsLambdaContextMock = (
+  props?: Record<keyof Context, any>
 ): Context => ({
   callbackWaitsForEmptyEventLoop: false,
   functionName: 'viewer-request',
